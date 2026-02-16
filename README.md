@@ -34,5 +34,3 @@ graph TD
     LC -->|Context + Prompt| LLM
     LLM -->|Streamed Response| UI
 ```
-    LC -->|Context + Prompt| LLM
-    LLM -->|Streamed Response| UI
