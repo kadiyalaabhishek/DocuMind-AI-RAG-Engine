@@ -20,6 +20,7 @@ graph TD
         LLM[OpenAI / Gemini API]
     end
 
+    %% Connections
     UI -->|Upload PDF| S3
     S3 -->|Trigger| Lambda
     Lambda --> Extract
@@ -29,7 +30,9 @@ graph TD
     UI -->|Query| FastAPI
     FastAPI --> LC
     LC -->|Similarity Search| VectorDB
-```
     VectorDB -->|Context Retrieval| LC
+    LC -->|Context + Prompt| LLM
+    LLM -->|Streamed Response| UI
+```
     LC -->|Context + Prompt| LLM
     LLM -->|Streamed Response| UI
