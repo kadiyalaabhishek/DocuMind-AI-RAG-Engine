@@ -1,0 +1,8 @@
+{
+  "name": "Copy of DocuMind AI - Serverless Document Analyzer",
+  "description": "A sophisticated serverless RAG (Retrieval-Augmented Generation) platform for analyzing and querying PDF documents using semantic search and Gemini AI.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
