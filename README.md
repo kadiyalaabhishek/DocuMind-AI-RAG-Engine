@@ -1,4 +1,3 @@
-### System Architecture
 graph TD
     subgraph Frontend_Layer [User Interface]
         UI[React.js & Tailwind CSS]
