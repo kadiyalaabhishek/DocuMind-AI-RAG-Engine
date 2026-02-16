@@ -1,3 +1,4 @@
+'''mermaid
 graph TD
     subgraph Frontend_Layer [User Interface]
         UI[React.js & Tailwind CSS]
@@ -31,3 +32,11 @@ graph TD
     VectorDB -->|Context Retrieval| LC
     LC -->|Context + Prompt| LLM
     LLM -->|Streamed Response| UI
+   
+'''
+
+
+
+
+
+    
