@@ -1,6 +1,10 @@
 graph LR
-    A[User Upload] --> B[Amazon S3]
-    B --> C[AWS Lambda: Chunking/Embedding]
-    C --> D[Pinecone Vector DB]
-    D --> E[FastAPI Backend]
-    E --> F[User Chat Interface]
+    A[User Upload] --> B[AWS S3]
+    B --> C[AWS Lambda]
+    subgraph "Processing Layer"
+    C --> D[Chunking & Embedding]
+    D --> E[Pinecone Vector DB]
+    end
+    F[User Chat] <--> G[FastAPI Backend]
+    G <--> E
+    G <--> H[LLM - OpenAI/Anthropic]
